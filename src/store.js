@@ -1,4 +1,5 @@
-import item from './item.js';
+/* eslint-disable no-console */
+import item from './item';
 
 const items = [];
 let hideCheckeditems = false;
