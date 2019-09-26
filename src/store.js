@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import item from './item';
 
 const items = [];
@@ -25,8 +24,8 @@ const findAndToggleChecked = function (id) {
 const findAndUpdateName = function (id, name) {
   try {
     item.validateName(name);
-    const item = this.findById(id);
-    item.name = name;
+    const newItem = this.findById(id);
+    newItem.name = name;
   } catch (e) {
     console.log('Cannot update name: ' + e.message);
   }

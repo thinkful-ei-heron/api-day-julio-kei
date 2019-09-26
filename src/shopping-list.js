@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import store from './store';
-// import item from './item';
+import item from './item';
 
 const generateItemElement = function (item) {
   let itemTitle = `<span class="shopping-item shopping-item__checked">${item.name}</span>`;
@@ -84,6 +84,7 @@ const handleDeleteItemClicked = function () {
 const handleEditShoppingItemSubmit = function () {
   $('.js-shopping-list').on('submit', '.js-edit-item', event => {
     event.preventDefault();
+    console.log('edit submit');
     const id = getItemIdFromElement(event.currentTarget);
     const itemName = $(event.currentTarget).find('.shopping-item').val();
     store.findAndUpdateName(id, itemName);
